@@ -3,6 +3,12 @@ Reusable LaTeX document classes
 
 # `exercise.cls`
 ## Commands and environments
+* [`\course{...}`](https://github.com/severij/latex#course)
+* [`\name{...}`](https://github.com/severij/latex#name)
+* [`\title{...}`](https://github.com/severij/latex#title)
+* [`\ex` or `\ex[...]`](https://github.com/severij/latex#ex-or-ex)
+* [`parts` environment](https://github.com/severij/latex#parts-environment)
+* [`code` environment](https://github.com/severij/latex#code-environment)
 ### `\course{...}`
 Use `\course{...}` _in preample_ to add course code and name to the header.
 ### `\name{...}`
