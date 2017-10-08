@@ -11,7 +11,18 @@
 \RequirePackage{listingsutf8}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
+\RequirePackage{tikz}
 \RequirePackage[scaled=0.80]{beramono}
+
+\setlist{itemsep=-3pt,topsep=-5pt,partopsep=0pt}
+\newcommand{\ditto}{%
+    \tikz{
+        \draw [line width=0.12ex] (-0.2ex,0) -- +(0,0.8ex)
+            (0.2ex,0) -- +(0,0.8ex);
+        \draw [line width=0.08ex] (-0.6ex,0.4ex) -- +(-1.5em,0)
+            (0.6ex,0.4ex) -- +(1.5em,0);
+    }%
+}
 
 \fancyhf{}
 \chead{\today}
@@ -39,7 +50,6 @@
     {
 
         \vspace{5pt}
-        %\large
         \bfseries
         \iflanguage{finnish}{Tehtävä \theexercise}{}
         \iflanguage{english}{Exercise \theexercise}{}
@@ -47,8 +57,15 @@
 
         \vspace{-5pt}
     }
-    ]
-    {#1}
+]{
+    {
+        \vspace{5pt}
+        \bfseries
+        #1
+
+        \vspace{-5pt}
+    }
+}
 
 \newenvironment{parts}[1][(\alph*)]
     {\begin{enumerate}[label=#1,leftmargin=*,topsep=0pt]}
